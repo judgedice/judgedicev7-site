@@ -1,73 +1,16 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Site repo
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Checkout Storybook repo
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.repository_owner }}/judgedicev7-storybook
-          token: ${{ secrets.SITE_REPO_PAT }}
-          path: storybook-repo
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'yarn'
-
-      - name: Install Storybook dependencies
-        run: |
-          cd storybook-repo
-          yarn install --frozen-lockfile
-
-      - name: Build Storybook library
-        run: |
-          cd storybook-repo
-          yarn build:lib
-
-      - name: Copy dist folder to Site repo
-        run: |
-          mkdir -p lib
-          rm -rf lib/*
-          cp -r storybook-repo/dist lib
-
-      - name: Install Site dependencies
-        run: |
-          yarn install --frozen-lockfile
-
-      - name: Build and Export Site
-        run: |
-          yaryarn export
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
+      - name: Clone storybook-repo
+        run: |
+          git clone https://github.com/judgedice/storybook-repo.git storybook-repo
+
+      - name: Change directory to storybook-repo
+        run: cd storybook-repo && echo "Now inside storybook-repo"
+
+      # Add further steps here, like building, copying Storybook output, committing, etc.
