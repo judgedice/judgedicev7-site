@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // If your repo is not at the root of your Pages site, set the basePath:
-  // basePath: '/judgedicev7-site',
-  // assetPrefix: '/judgedicev7-site',
+  // Set the basePath to match your repository name
+  basePath: '/judgedicev7-site',
+  // Set assetPrefix to match basePath for static assets
+  assetPrefix: '/judgedicev7-site/',
   images: {
     unoptimized: true,  // Required for static export
   },

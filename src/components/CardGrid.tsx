@@ -1,6 +1,6 @@
 'use client';
 
-import { Card as StorybookCard } from '../../../judgedicev7-storybook/src/stories/components/Card';
+import { Card } from 'judgedicev7';
 
 export const CardGrid = () => {
   const cards = [
@@ -57,7 +57,7 @@ export const CardGrid = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 max-w-7xl mx-auto">
       {cards.map((card, index) => (
-        <StorybookCard
+        <Card
           key={index}
           {...card}
           onCtaClick={() => {}}
