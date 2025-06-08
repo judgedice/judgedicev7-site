@@ -1,0 +1,8 @@
+@import '../../../judgedicev7-storybook/src/stories/global.css';
+@import '../../../judgedicev7-storybook/src/stories/components/header.css';
+@import '../../../judgedicev7-storybook/src/stories/organisms/heroes/hero-css-styles.css';
+@import '../../../judgedicev7-storybook/src/stories/components/card.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
