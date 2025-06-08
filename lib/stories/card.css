@@ -1,0 +1,148 @@
+.card {
+  width: 350px;
+  height: 280px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px 24px 16px 24px;
+}
+
+.card:hover .card-image {
+  opacity: 0;
+}
+
+.card-title {
+  color: white;
+  font-size: 24px;
+  font-weight: var(--vs-font-weight-bold);
+  font-family: var(--vs-font-family-body);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.card-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .card-details {
+  opacity: 1;
+}
+
+.detail-title {
+  font-size: 22px;
+  font-weight: var(--vs-font-weight-bold);
+  font-family: var(--vs-font-family-body);
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.detail-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  font-family: var(--vs-font-family-heading);
+  margin: 0 0 20px 0;
+}
+
+.detail-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-features li {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.detail-features li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.detail-cta {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--vs-color-primary-light) 0%, var(--vs-color-primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: var(--vs-font-weight-light);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.detail-cta:hover {
+  transform: scale(1.05);
+}
+
+/* Variant styles */
+.card.green .card-image {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.card.green .detail-features li:before {
+  color: #11998e;
+}
+
+.card.green .detail-cta {
+  background: linear-gradient(135deg, var(--vs-color-status-success-light) 0%, var(--vs-color-status-success-dark) 100%);
+}
+
+.card.orange .card-image {
+  background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
+}
+
+.card.orange .detail-features li:before {
+  color: #fc4a1a;
+}
+
+.card.orange .detail-cta {
+  background: linear-gradient(135deg, var(--vs-color-status-warning-light) 0%, var(--vs-color-status-warning-dark) 100%);
+}

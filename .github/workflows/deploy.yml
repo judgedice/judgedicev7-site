@@ -54,7 +54,7 @@ jobs:
 
       - name: Build and Export Site
         run: |
-          yarn export
+          yaryarn export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

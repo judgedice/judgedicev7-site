@@ -1,0 +1,81 @@
+@import './design-tokens.css';
+
+.storybook-page {
+  font-family: var(--vs-font-family);
+  font-size: var(--vs-font-size-base);
+  line-height: 1.5;
+  color: var(--vs-text);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--vs-spacing-xl);
+}
+
+.storybook-page h2 {
+  font-size: var(--vs-font-size-h2);
+  font-weight: 700;
+  color: var(--vs-text);
+  margin: var(--vs-spacing-lg) 0;
+}
+
+.storybook-page h3 {
+  font-size: var(--vs-font-size-h3);
+  font-weight: 600;
+  color: var(--vs-text);
+  margin: var(--vs-spacing-md) 0;
+}
+
+.storybook-page p {
+  margin: var(--vs-spacing-md) 0;
+  color: var(--vs-text-light);
+}
+
+.storybook-page a {
+  color: var(--vs-primary);
+  text-decoration: none;
+  transition: color var(--vs-transition-fast);
+}
+
+.storybook-page a:hover {
+  color: var(--vs-primary-light);
+}
+
+.storybook-page ul {
+  margin: 1em 0;
+  padding-left: 30px;
+}
+
+.storybook-page li {
+  margin-bottom: 8px;
+}
+
+.storybook-page .tip {
+  display: inline-block;
+  border-radius: var(--vs-border-radius-md);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: var(--vs-spacing-sm) var(--vs-spacing-md);
+  margin: var(--vs-spacing-md) 0;
+  background-color: var(--vs-primary);
+  color: var(--vs-white);
+}
+
+.storybook-page .tip-wrapper {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-top: var(--vs-spacing-lg);
+  margin-bottom: var(--vs-spacing-lg);
+  padding: var(--vs-spacing-md);
+  background-color: var(--vs-secondary);
+  border-radius: var(--vs-border-radius-md);
+}
+
+.storybook-page .tip-wrapper code {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: var(--vs-spacing-xs) var(--vs-spacing-sm);
+  margin: 0 var(--vs-spacing-xs);
+  border-radius: var(--vs-border-radius-sm);
+  background-color: var(--vs-white);
+  color: var(--vs-primary);
+}

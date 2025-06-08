@@ -1,0 +1,56 @@
+@import './design-tokens.css';
+
+.storybook-button {
+  font-family: var(--vs-font-family-body);
+  font-weight: var(--vs-font-weight-light);
+  text-transform: uppercase;
+  letter-spacing: var(--vs-letter-spacing-subtitle);
+  border: 0;
+  border-radius: var(--vs-border-radius-md);
+  cursor: pointer;
+  display: inline-block;
+  line-height: var(--vs-line-height-normal);
+  transition: all var(--vs-transition-normal);
+  padding: var(--vs-spacing-md) var(--vs-spacing-lg);
+  box-shadow: var(--vs-shadow-sm);
+}
+
+.storybook-button--primary {
+  color: var(--vs-white);
+  background-color: var(--vs-primary);
+}
+
+.storybook-button--primary:hover {
+  background-color: var(--vs-primary-light);
+  box-shadow: var(--vs-shadow-md);
+}
+
+.storybook-button--primary:active {
+  background-color: var(--vs-primary-dark);
+}
+
+.storybook-button--secondary {
+  color: var(--vs-text);
+  background-color: var(--vs-secondary);
+  box-shadow: var(--vs-shadow-sm);
+}
+
+.storybook-button--secondary:hover {
+  background-color: #E0E0E0;
+  box-shadow: var(--vs-shadow-md);
+}
+
+.storybook-button--small {
+  font-size: 0.875rem;
+  padding: var(--vs-spacing-sm) var(--vs-spacing-md);
+}
+
+.storybook-button--medium {
+  font-size: 1rem;
+  padding: var(--vs-spacing-md) var(--vs-spacing-lg);
+}
+
+.storybook-button--large {
+  font-size: 1.125rem;
+  padding: var(--vs-spacing-lg) var(--vs-spacing-xl);
+}

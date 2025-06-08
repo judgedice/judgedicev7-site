@@ -6,23 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf .next lib node_modules/judgedicev7",
+    "prepare-lib": "cd ../judgedicev7-storybook && yarn build:lib && cd ../judgedicev7-site && mkdir -p lib && rm -rf lib/* && cp -r ../judgedicev7-storybook/lib-dist/* lib/",
+    "build:site": "yarn clean && yarn install && yarn prepare-lib && yarn export"
   },
   "dependencies": {
-    "next": "15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "judgedicev7": "file:./lib"
+    "judgedicev7": "file:../judgedicev7-storybook",
+    "next": "14.1.3",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4.0.0",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.3",
-    "postcss": "^8",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.21",
+    "css-loader": "6.11.0",
+    "postcss": "^8.5.4",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "3.3.4",
+    "tailwindcss": "^4.1.8",
     "typescript": "^5"
   }
-} 
+}

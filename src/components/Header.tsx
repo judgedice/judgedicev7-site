@@ -1,6 +1,6 @@
 'use client';
 
-import { Header as StorybookHeader } from '../../../judgedicev7-storybook/src/stories/components/Header';
+import { Header as StorybookHeader } from 'judgedicev7';
 
 export const Header = () => {
   return (

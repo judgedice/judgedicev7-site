@@ -1,15 +1,45 @@
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Set the basePath to match your repository name
-  basePath: '/judgedicev7-site',
-  // Set assetPrefix to match basePath for static assets
-  assetPrefix: '/judgedicev7-site/',
   images: {
-    unoptimized: true,  // Required for static export
+    unoptimized: true,
   },
-  // Ensure we can import from the storybook project
-  transpilePackages: ['judgedicev7'],
+  webpack: (config) => {
+    // Add a rule to handle CSS files
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            modules: false,
+          },
+        },
+        'postcss-loader',
+      ],
+      include: [
+        resolve(__dirname, 'src'),
+        resolve(__dirname, 'lib'),
+        resolve(__dirname, '../judgedicev7-storybook/src'),
+      ],
+    });
+
+    // Add resolve alias for the storybook project
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@storybook': resolve(__dirname, '../judgedicev7-storybook/src'),
+    };
+
+    return config;
+  },
 };
 
 export default nextConfig; 

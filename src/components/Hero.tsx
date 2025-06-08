@@ -1,6 +1,6 @@
 'use client';
 
-import { Hero as StorybookHero } from '../../../judgedicev7-storybook/src/stories/organisms/heroes/Hero';
+import { Hero as StorybookHero } from 'judgedicev7';
 
 export const Hero = () => {
   return (

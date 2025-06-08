@@ -1,0 +1,158 @@
+@import './design-tokens.css';
+
+.quote-carousel {
+  background-color: var(--quote-carousel-bg, var(--vs-color-secondary));
+  padding: var(--vs-spacing-3xl) var(--vs-spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-carousel__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-carousel__content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity var(--vs-transition-normal);
+}
+
+.quote-carousel__content.fade-out {
+  opacity: 0;
+}
+
+.quote-carousel__content.fade-in {
+  opacity: 1;
+}
+
+.quote-carousel__quote-wrapper {
+  position: relative;
+  padding: var(--vs-spacing-xl) 0;
+}
+
+.quote-carousel__quote-mark {
+  font-family: var(--vs-font-family-body);
+  font-size: 12rem;  /* Much larger size */
+  line-height: 1;
+  color: var(--quote-carousel-quote-mark, var(--vs-color-text-lighter));
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
+}
+
+.quote-carousel__quote-mark::before {
+  content: "\201C";  /* Unicode for left double quotation mark */
+  font-family: var(--vs-font-family-body);
+  font-weight: var(--vs-font-weight-light);
+}
+
+.quote-carousel__pull-quote {
+  font-family: var(--vs-font-family-heading);
+  font-size: var(--vs-font-size-4xl);
+  line-height: var(--vs-line-height-tight);
+  color: var(--quote-carousel-text, var(--vs-color-text-lighter));
+  margin-bottom: var(--vs-spacing-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.quote-carousel__body {
+  font-family: var(--vs-font-family-body);
+  font-weight: var(--vs-font-weight-light);
+  font-size: var(--vs-font-size-lg);
+  line-height: var(--vs-line-height-normal);
+  color: var(--quote-carousel-text, var(--vs-color-text-lighter));
+  margin-bottom: var(--vs-spacing-xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-carousel__citation {
+  font-family: var(--vs-font-family-body);
+}
+
+.quote-carousel__citation-name {
+  font-weight: var(--vs-font-weight-medium);
+  font-size: var(--vs-font-size-base);
+  color: var(--quote-carousel-text, var(--vs-color-text-lighter));
+  margin-bottom: var(--vs-spacing-xs);
+}
+
+.quote-carousel__citation-role,
+.quote-carousel__citation-company {
+  font-weight: var(--vs-font-weight-light);
+  font-size: var(--vs-font-size-sm);
+  color: var(--quote-carousel-text, var(--vs-color-text-lighter));
+  margin-bottom: var(--vs-spacing-xs);
+}
+
+.quote-carousel__navigation {
+  display: flex;
+  justify-content: center;
+  gap: var(--vs-spacing-sm);
+  margin-top: var(--vs-spacing-xl);
+}
+
+.quote-carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--vs-border-radius-full);
+  border: 2px solid var(--vs-color-primary);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--vs-transition-normal);
+}
+
+.quote-carousel__dot:hover {
+  background-color: var(--vs-color-primary-light);
+}
+
+.quote-carousel__dot.active {
+  background-color: var(--vs-color-primary);
+}
+
+@media (max-width: 768px) {
+  .quote-carousel {
+    padding: var(--vs-spacing-2xl) var(--vs-spacing-lg);
+  }
+
+  .quote-carousel__pull-quote {
+    font-size: var(--vs-font-size-3xl);
+  }
+
+  .quote-carousel__body {
+    font-size: var(--vs-font-size-base);
+  }
+
+  .quote-carousel__quote-mark {
+    font-size: var(--vs-font-size-5xl);
+    top: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-carousel__pull-quote {
+    font-size: var(--vs-font-size-2xl);
+  }
+
+  .quote-carousel__body {
+    font-size: var(--vs-font-size-sm);
+  }
+
+  .quote-carousel__citation-name {
+    font-size: var(--vs-font-size-sm);
+  }
+
+  .quote-carousel__citation-role,
+  .quote-carousel__citation-company {
+    font-size: var(--vs-font-size-xs);
+  }
+} 

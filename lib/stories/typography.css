@@ -1,0 +1,144 @@
+@import './design-tokens.css';
+
+.vs-typography {
+  margin: 0;
+  line-height: var(--vs-line-height-normal);
+  letter-spacing: var(--vs-letter-spacing-normal);
+}
+
+/* Variants */
+.vs-typography--h1,
+.vs-typography--h2,
+.vs-typography--h3,
+.vs-typography--h4,
+.vs-typography--h5,
+.vs-typography--h6 {
+  font-family: var(--vs-font-family-heading);
+  line-height: var(--vs-line-height-tight);
+  letter-spacing: var(--vs-letter-spacing-tight);
+}
+
+.vs-typography--h1 {
+  font-size: var(--vs-font-size-6xl);
+  margin-bottom: var(--vs-spacing-xl);
+}
+
+.vs-typography--h2 {
+  font-size: var(--vs-font-size-5xl);
+  margin-bottom: var(--vs-spacing-lg);
+}
+
+.vs-typography--h3 {
+  font-size: var(--vs-font-size-4xl);
+  margin-bottom: var(--vs-spacing-lg);
+}
+
+.vs-typography--h4 {
+  font-size: var(--vs-font-size-3xl);
+  margin-bottom: var(--vs-spacing-md);
+}
+
+.vs-typography--h5 {
+  font-size: var(--vs-font-size-2xl);
+  margin-bottom: var(--vs-spacing-md);
+}
+
+.vs-typography--h6 {
+  font-size: var(--vs-font-size-xl);
+  margin-bottom: var(--vs-spacing-sm);
+}
+
+/* Subtitle */
+.vs-typography--subtitle {
+  font-family: var(--vs-font-family-subtitle);
+  font-size: var(--vs-font-size-2xl);
+  line-height: var(--vs-line-height-subtitle);
+  letter-spacing: var(--vs-letter-spacing-subtitle);
+  font-weight: var(--vs-font-weight-medium);
+  text-transform: uppercase;
+  margin-bottom: var(--vs-spacing-lg);
+}
+
+/* Body text styles */
+.vs-typography--body,
+.vs-typography--small,
+.vs-typography--caption {
+  font-family: var(--vs-font-family-body);
+}
+
+.vs-typography--body {
+  font-size: var(--vs-font-size-base);
+  line-height: var(--vs-line-height-normal);
+  margin-bottom: var(--vs-spacing-md);
+}
+
+.vs-typography--small {
+  font-size: var(--vs-font-size-sm);
+  line-height: var(--vs-line-height-normal);
+  margin-bottom: var(--vs-spacing-sm);
+}
+
+.vs-typography--caption {
+  font-size: var(--vs-font-size-xs);
+  line-height: var(--vs-line-height-normal);
+  margin-bottom: var(--vs-spacing-xs);
+}
+
+/* Weights */
+.vs-typography--normal {
+  font-weight: var(--vs-font-weight-normal);
+}
+
+.vs-typography--medium {
+  font-weight: var(--vs-font-weight-medium);
+}
+
+.vs-typography--semibold {
+  font-weight: var(--vs-font-weight-semibold);
+}
+
+.vs-typography--bold {
+  font-weight: var(--vs-font-weight-bold);
+}
+
+/* Colors */
+.vs-typography--primary {
+  color: var(--vs-primary);
+}
+
+.vs-typography--text {
+  color: var(--vs-text);
+}
+
+.vs-typography--text-light {
+  color: var(--vs-text-light);
+}
+
+.vs-typography--success {
+  color: var(--vs-success);
+}
+
+.vs-typography--warning {
+  color: var(--vs-warning);
+}
+
+.vs-typography--error {
+  color: var(--vs-error);
+}
+
+.vs-typography--info {
+  color: var(--vs-info);
+}
+
+/* Alignment */
+.vs-typography--left {
+  text-align: left;
+}
+
+.vs-typography--center {
+  text-align: center;
+}
+
+.vs-typography--right {
+  text-align: right;
+} 

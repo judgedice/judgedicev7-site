@@ -1,0 +1,59 @@
+@import './design-tokens.css';
+
+.storybook-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: var(--vs-spacing-lg) var(--vs-spacing-xl);
+  font-family: var(--vs-font-family);
+  background-color: var(--vs-white);
+  box-shadow: var(--vs-shadow-sm);
+}
+
+.storybook-header svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.storybook-header h1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: var(--vs-spacing-sm) 0;
+  font-size: var(--vs-font-size-h2);
+  font-weight: 700;
+  color: var(--vs-text);
+  line-height: 1;
+}
+
+.storybook-header button {
+  font-family: var(--vs-font-family);
+  font-weight: 600;
+  border: 0;
+  border-radius: var(--vs-border-radius-md);
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  transition: all var(--vs-transition-normal);
+  padding: var(--vs-spacing-sm) var(--vs-spacing-md);
+  font-size: 0.875rem;
+  background-color: var(--vs-primary);
+  color: var(--vs-white);
+  box-shadow: var(--vs-shadow-sm);
+}
+
+.storybook-header button:hover {
+  background-color: var(--vs-primary-light);
+  box-shadow: var(--vs-shadow-md);
+}
+
+.storybook-header button + button {
+  margin-left: var(--vs-spacing-md);
+}
+
+.storybook-header .welcome {
+  color: var(--vs-text-light);
+  font-size: 0.875rem;
+  margin-right: var(--vs-spacing-md);
+}

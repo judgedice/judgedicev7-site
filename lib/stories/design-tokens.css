@@ -1,0 +1,141 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400;600&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap');
+/* Note: Gotham is a commercial font, we'll need to use a local font file */
+
+:root {
+  /* Font Families */
+  --vs-font-family-heading: 'Montserrat', sans-serif;
+  --vs-font-family-subtitle: 'DM Serif Display', serif;
+  --vs-font-family-body: 'Montserrat', sans-serif;
+  --vs-font-family-body-special: 'DM Serif Display', serif;
+
+  /* Brand Colors */
+  --vs-color-primary: #1A365D;      /* Deep navy blue from main heading */
+  --vs-color-secondary: #2D3748;    /* Dark slate for secondary text */
+  --vs-color-primary-dark: #1B5E20; /* Darker shade of primary color for hover states */  
+  --vs-color-accent: #48BB78;       /* Green accent from plant imagery */
+  
+  /* Text Colors */
+  --vs-color-text: #2D3748;         /* Main text color */
+  --vs-color-text-light: #718096;   /* Secondary text color */
+  --vs-color-text-lighter: #A0AEC0; /* Very light text color */
+  
+  /* Status Colors */
+  --vs-color-success: #48BB78;      /* Green for success states */
+  --vs-color-warning: #ED8936;      /* Orange for warnings */
+  --vs-color-error: #E53E3E;        /* Red for errors */
+  --vs-color-info: #4299E1;         /* Blue for info */
+  
+  /* Background Colors */
+  --vs-color-background: #FFFFFF;   /* White background */
+  --vs-color-background-alt: #F7FAFC; /* Light gray background */
+  --vs-color-border: #E2E8F0;       /* Border color */
+  
+  /* Colors */
+  --vs-primary: #2E7D32;  /* Main brand green */
+  --vs-primary-light: #4CAF50;  /* Lighter green for hover states */
+  --vs-primary-dark: #1B5E20;  /* Darker green for active states */
+  --vs-secondary: #F5F5F5;  /* Light gray for backgrounds */
+  --vs-white: #FFFFFF;
+  --vs-black: #000000;
+  --vs-success: #4CAF50;
+  --vs-warning: #FFC107;
+  --vs-error: #F44336;
+  --vs-info: #2196F3;
+  
+  /* Typography */
+  --vs-font-size-xs: 0.75rem;    /* 12px */
+  --vs-font-size-sm: 0.875rem;   /* 14px */
+  --vs-font-size-base: 1rem;     /* 16px */
+  --vs-font-size-lg: 1.125rem;   /* 18px */
+  --vs-font-size-xl: 1.25rem;    /* 20px */
+  --vs-font-size-2xl: 1.5rem;    /* 24px */
+  --vs-font-size-3xl: 1.875rem;  /* 30px */
+  --vs-font-size-4xl: 2.25rem;   /* 36px */
+  --vs-font-size-5xl: 3rem;      /* 48px */
+  --vs-font-size-6xl: 3.75rem;   /* 60px */
+  
+  /* Font Weights */
+  --vs-font-weight-light: 100;
+  --vs-font-weight-normal: 300;
+  --vs-font-weight-medium: 400;
+  --vs-font-weight-semibold: 600;
+  --vs-font-weight-bold: 700;
+  
+  /* Line Heights */
+  --vs-line-height-tight: 1.2;
+  --vs-line-height-normal: 1.5;
+  --vs-line-height-subtitle: 1.3;
+  
+  /* Letter Spacing */
+  --vs-letter-spacing-tight: -0.02em;
+  --vs-letter-spacing-normal: 0;
+  --vs-letter-spacing-subtitle: 0.05em;
+  
+  /* Spacing */
+  --vs-spacing-xs: 0.25rem;    /* 4px */
+  --vs-spacing-sm: 0.5rem;     /* 8px */
+  --vs-spacing-md: 1rem;       /* 16px */
+  --vs-spacing-lg: 1.5rem;     /* 24px */
+  --vs-spacing-xl: 2rem;       /* 32px */
+  --vs-spacing-2xl: 3rem;      /* 48px */
+  --vs-spacing-3xl: 4rem;      /* 64px */
+  
+  /* Border Radius */
+  --vs-border-radius-sm: 4px;
+  --vs-border-radius-md: 8px;
+  --vs-border-radius-lg: 12px;
+  --vs-border-radius-full: 9999px;
+  
+  /* Shadows */
+  --vs-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --vs-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --vs-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --vs-shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --vs-transition-fast: 0.2s ease;
+  --vs-transition-normal: 0.3s ease;
+  --vs-transition-slow: 0.5s ease;
+  
+  /* Z-index */
+  --vs-z-index-dropdown: 1000;
+  --vs-z-index-sticky: 1020;
+  --vs-z-index-fixed: 1030;
+  --vs-z-index-modal: 1040;
+  --vs-z-index-popover: 1050;
+  --vs-z-index-tooltip: 1060;
+}
+
+/* Typography Scale */
+.vs-typography--h1 { font-size: var(--vs-font-size-6xl); }
+.vs-typography--h2 { font-size: var(--vs-font-size-5xl); }
+.vs-typography--h3 { font-size: var(--vs-font-size-4xl); }
+.vs-typography--h4 { font-size: var(--vs-font-size-3xl); }
+.vs-typography--h5 { font-size: var(--vs-font-size-2xl); }
+.vs-typography--h6 { font-size: var(--vs-font-size-xl); }
+.vs-typography--body { font-size: var(--vs-font-size-base); }
+.vs-typography--small { font-size: var(--vs-font-size-sm); }
+.vs-typography--caption { font-size: var(--vs-font-size-xs); }
+
+/* Font Weights */
+.vs-typography--light { font-weight: var(--vs-font-weight-light); }
+.vs-typography--normal { font-weight: var(--vs-font-weight-normal); }
+.vs-typography--medium { font-weight: var(--vs-font-weight-medium); }
+.vs-typography--semibold { font-weight: var(--vs-font-weight-semibold); }
+.vs-typography--bold { font-weight: var(--vs-font-weight-bold); }
+
+/* Colors */
+.vs-typography--primary { color: var(--vs-color-primary); }
+.vs-typography--text { color: var(--vs-color-text); }
+.vs-typography--text-light { color: var(--vs-color-text-light); }
+.vs-typography--success { color: var(--vs-color-success); }
+.vs-typography--warning { color: var(--vs-color-warning); }
+.vs-typography--error { color: var(--vs-color-error); }
+.vs-typography--info { color: var(--vs-color-info); }
+
+/* Alignment */
+.vs-typography--left { text-align: left; }
+.vs-typography--center { text-align: center; }
+.vs-typography--right { text-align: right; } 
