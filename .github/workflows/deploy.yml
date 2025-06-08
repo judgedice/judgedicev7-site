@@ -35,7 +35,7 @@ jobs:
       - name: Install Storybook dependencies
         run: |
           cd storybook-repo
-          yarn install --frozen-lockfile --verbose
+          yarn install --frozen-lockfile
 
       - name: Build Storybook library
         run: |
@@ -54,7 +54,7 @@ jobs:
 
       - name: Build and Export Site
         run: |
-          yaryarn export
+          yarn export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
