@@ -17,7 +17,6 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "judgedicev7": "file:../judgedicev7-storybook",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/node": "^20",
     "@types/react": "^18",
