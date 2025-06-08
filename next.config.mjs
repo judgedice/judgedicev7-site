@@ -35,7 +35,7 @@ const nextConfig = {
     // Add resolve alias for the storybook project
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@storybook': resolve(__dirname, '../judgedicev7-storybook/src'),
+       '@storybook': path.resolve(process.cwd(), 'lib'),
     };
 
     return config;
