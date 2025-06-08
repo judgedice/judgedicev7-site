@@ -1,0 +1,12 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { Card } from '../../components/Card';
+declare const meta: Meta<typeof Card>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export declare const Default: Story;
+export declare const Green: Story;
+export declare const Orange: Story;
+export declare const WithCustomBackground: Story;
+export declare const LongContent: Story;
+export declare const Playground: Story;
+export declare const docs: Story;

@@ -2046,12 +2046,8 @@ json5@^1.0.2:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
-"judgedicev7@file:../judgedicev7-storybook":
-  version "0.1.0"
-  dependencies:
-    next "15.3.3"
-    react "^19.0.0"
-    react-dom "^19.0.0"
+"judgedicev7@file:./lib":
+  version "0.0.0"
 
 keyv@^4.5.4:
   version "4.5.4"
