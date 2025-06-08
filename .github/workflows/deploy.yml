@@ -40,7 +40,7 @@ jobs:
       - name: Build Storybook library
         run: |
           cd storybook-repo
-          yarn build:lib
+          yarn build:lib --verbose
 
       - name: Copy dist folder to Site repo
         run: |
@@ -56,6 +56,7 @@ jobs:
         run: |
           echo "Contents of lib/dist folder:"
           ls -la lib/dist/
+          ls -la src
           find lib/dist -name "*.css" -type f
 
       - name: Build and Export Site
