@@ -28,14 +28,14 @@ const nextConfig = {
       include: [
         resolve(__dirname, 'src'),
         resolve(__dirname, 'lib'),
-        resolve(__dirname, '../judgedicev7-storybook/src'),
+        resolve(__dirname, '../judgedicev7-storybook/src'), 
       ],
     });
 
     // Add resolve alias for the storybook project
     config.resolve.alias = {
       ...config.resolve.alias,
-       '@storybook': path.resolve(process.cwd(), 'lib'),
+       '@storybook': resolve(process.cwd(), 'lib'),
     };
 
     return config;
