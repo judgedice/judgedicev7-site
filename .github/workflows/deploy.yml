@@ -14,31 +14,60 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
+      - name: Checkout Site repo
+        uses: actions/checkout@v4
+        with:
+          path: site-repo
+
+      - name: Checkout Storybook repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/judgedicev7-storybook
+          token: ${{ secrets.SITE_REPO_PAT }}
+          path: storybook-repo
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
           cache: 'yarn'
-      
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      
-      - name: Build and Export
-        run: yarn export
-      
+
+      - name: Install Storybook dependencies
+        run: |
+          cd storybook-repo
+          yarn install --frozen-lockfile
+
+      - name: Build Storybook library
+        run: |
+          cd storybook-repo
+          yarn build:lib
+
+      - name: Copy dist folder to Site repo
+        run: |
+          rm -rf site-repo/lib
+          cp -r storybook-repo/dist site-repo/lib
+
+      - name: Install Site dependencies
+        run: |
+          cd site-repo
+          yarn install --frozen-lockfile
+
+      - name: Build and Export Site
+        run: |
+          cd site-repo
+          yarn export
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: site-repo/out
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
