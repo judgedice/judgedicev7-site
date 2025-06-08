@@ -32,10 +32,6 @@ jobs:
           node-version: '20'
           cache: 'yarn'
 
-      - name: Clone storybook-repo
-        run: |
-          git clone https://github.com/judgedice/storybook-repo.git storybook-repo
-
       - name: Install Storybook dependencies
         run: |
           cd storybook-repo
