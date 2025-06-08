@@ -35,7 +35,7 @@ const nextConfig = {
     // Add resolve alias for the storybook project
     config.resolve.alias = {
       ...config.resolve.alias,
-       '@storybook': resolve(process.cwd(), 'lib'),
+       '@storybook': resolve(process.cwd(), 'lib/dist'),
     };
 
     return config;
