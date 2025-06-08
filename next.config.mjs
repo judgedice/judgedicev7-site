@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: process.env.NODE_ENV === 'production' ? '/judgedicev7-site' : '',
+  output: 'export',
+  // If your repo is not at the root of your Pages site, set the basePath:
+  // basePath: '/judgedicev7-site',
+  // assetPrefix: '/judgedicev7-site',
   images: {
     unoptimized: true,  // Required for static export
   },
