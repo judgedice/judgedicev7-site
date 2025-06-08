@@ -52,6 +52,12 @@ jobs:
         run: |
           yarn install --frozen-lockfile
 
+      - name: Debug lib contents
+        run: |
+          echo "Contents of lib folder:"
+          find lib -type f -name "*.css" | head -10
+          ls -la lib/
+
       - name: Build and Export Site
         run: |
           yarn export
