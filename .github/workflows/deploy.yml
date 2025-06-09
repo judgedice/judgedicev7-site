@@ -53,6 +53,7 @@ jobs:
         run: |
           echo "Current Working Directory:"
           ls ../
+          rm -rf node_modules .next
           yarn install --frozen-lockfile
 
       - name: Debug lib contents
