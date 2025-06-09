@@ -50,6 +50,8 @@ jobs:
 
       - name: Install Site dependencies
         run: |
+          echo "Current Working Directory:"
+          ls ../
           yarn install --frozen-lockfile
 
       - name: Debug lib contents
