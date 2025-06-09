@@ -1,7 +1,8 @@
-@import '@storybook/stories/header.css';
-@import '@storybook/stories/card.css';
-@import '@storybook/stories/colors.css';
-@import '@storybook/stories/design-tokens.css';
+@import url('../../lib/stories/global.css');
+@import url('../../lib/stories/components/button.css');
+@import url('../../lib/stories/components/card.css');
+@import url('../../lib/stories/components/header.css');
+@import url('../../lib/stories/components/design-tokens.css');
 
 @tailwind base;
 @tailwind components;
