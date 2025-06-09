@@ -44,9 +44,9 @@ jobs:
 
       - name: Copy dist folder to Site repo
         run: |
-          mkdir -p lib
-          rm -rf lib/*
-          cp -r storybook-repo/dist lib
+          rm -rf lib
+          mkdir -p lib/stories
+          cp -r storybook-repo/lib-dist/stories/* lib/stories/
 
       - name: Install Site dependencies
         run: |
