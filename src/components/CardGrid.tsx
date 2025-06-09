@@ -1,8 +1,8 @@
 'use client';
-
+console.log( "CWD: " + process.cwd() );
 import { Card } from 'judgedicev7';
 
-console.log( "CWD: " + process.cwd() );
+
 
 export const CardGrid = () => {
   const cards = [
