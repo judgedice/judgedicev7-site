@@ -40,7 +40,7 @@ jobs:
       - name: Build Storybook library
         run: |
           cd storybook-repo
-          yarn build:lib --verbose
+          yarn build:lib
 
       - name: Copy dist folder to Site repo
         run: |
