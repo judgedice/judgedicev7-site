@@ -61,6 +61,7 @@ jobs:
 
       - name: Build and Export Site
         run: |
+          cd ../
           yarn export
 
       - name: Upload artifact
