@@ -47,6 +47,7 @@ jobs:
           rm -rf lib
           mkdir -p lib/stories
           cp -r storybook-repo/lib-dist/stories/* lib/stories/
+          rm -rf storybook-repo
 
       - name: Install Site dependencies
         run: |
