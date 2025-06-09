@@ -47,12 +47,14 @@ const nextConfig = {
        '@storybook': libPath,
        '@storybook/stories': libPath,
        'judgedicev7': path.resolve(process.cwd(), './lib'),
+       'judgedicev7/index': path.resolve(process.cwd(), './lib/index.js'),
+       'judgedicev7/index.js': path.resolve(process.cwd(), './lib/index.js'),
     };
 
-    // Add module resolution
+    // Add module resolution - make sure lib is first
     config.resolve.modules = [
-      ...config.resolve.modules,
       path.resolve(process.cwd(), './lib'),
+      ...config.resolve.modules,
     ];
 
     // Add file extensions
@@ -63,6 +65,9 @@ const nextConfig = {
       '.ts',
       '.tsx',
     ];
+
+    // Add mainFields to ensure proper resolution
+    config.resolve.mainFields = ['module', 'main'];
 
     console.log('judgev7 alias configured:', config.resolve.alias['judgedicev7']);
     var jls = config.resolve.alias['judgedicev7'];
