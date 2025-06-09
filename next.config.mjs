@@ -48,9 +48,17 @@ const nextConfig = {
        '@storybook/stories': libPath,
        'judgedicev7': path.resolve(process.cwd(), './lib'),
     };
+
+    // Add module resolution
+    config.resolve.modules = [
+      ...config.resolve.modules,
+      path.resolve(process.cwd(), './lib'),
+    ];
+
     console.log('judgev7 alias configured:', config.resolve.alias['judgedicev7']);
     var jls = config.resolve.alias['judgedicev7'];
     console.log('Contents of judgedicev7:', fs.readdirSync(jls));
+    console.log('Full alias config:', config.resolve.alias);
 
     return config;
   },
