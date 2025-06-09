@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next build && next export",
+    "export": "next build",
     "start": "next start",
     "clean": "rm -rf .next lib node_modules/judgedicev7",
     "prepare-lib": "cd ../judgedicev7-storybook && yarn build:lib && cd ../judgedicev7-site && mkdir -p lib && rm -rf lib/* && cp -r ../judgedicev7-storybook/lib-dist/* lib/",

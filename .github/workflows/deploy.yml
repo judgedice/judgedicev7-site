@@ -63,7 +63,6 @@ jobs:
 
       - name: Build and Export Site
         run: |
-          cd ../judgedicev7-site/
           yarn export
 
       - name: Upload artifact

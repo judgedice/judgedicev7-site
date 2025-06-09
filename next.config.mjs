@@ -18,7 +18,7 @@ const nextConfig = {
     const fs = require('fs');
     const libPath = path.resolve(process.cwd(), './lib/stories');
     console.log('Lib path exists:', fs.existsSync(libPath));
-    console.log('Files in lib/stories:', fs.readdirSync(libPath).filter(f => f.endsWith('.css')));
+   // console.log('Files in lib/stories:', fs.readdirSync(libPath).filter(f => f.endsWith('.css')));
   
     // Add a rule to handle CSS files
     config.module.rules.push({
@@ -70,9 +70,9 @@ const nextConfig = {
     config.resolve.mainFields = ['module', 'main'];
 
     console.log('judgev7 alias configured:', config.resolve.alias['judgedicev7']);
-    var jls = config.resolve.alias['judgedicev7'];
-    console.log('Contents of judgedicev7:', fs.readdirSync(jls));
-    console.log('Full alias config:', config.resolve.alias);
+    //var jls = config.resolve.alias['judgedicev7'];
+   // console.log('Contents of judgedicev7:', fs.readdirSync(jls));
+   // console.log('Full alias config:', config.resolve.alias);
 
     return config;
   },
