@@ -55,6 +55,15 @@ const nextConfig = {
       path.resolve(process.cwd(), './lib'),
     ];
 
+    // Add file extensions
+    config.resolve.extensions = [
+      ...config.resolve.extensions,
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+    ];
+
     console.log('judgev7 alias configured:', config.resolve.alias['judgedicev7']);
     var jls = config.resolve.alias['judgedicev7'];
     console.log('Contents of judgedicev7:', fs.readdirSync(jls));
