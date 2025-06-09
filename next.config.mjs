@@ -14,12 +14,19 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  webpack: (config) => {
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'].filter(ext => !ext.includes('storybook-repo')),
+  webpack: (config, { isServer }) => {
     const fs = require('fs');
     const libPath = path.resolve(process.cwd(), './lib/stories');
     console.log('Lib path exists:', fs.existsSync(libPath));
    // console.log('Files in lib/stories:', fs.readdirSync(libPath).filter(f => f.endsWith('.css')));
   
+    // Exclude storybook repo from compilation
+    config.module.rules.push({
+      test: /\.(tsx|ts|jsx|js)$/,
+      exclude: /storybook-repo/,
+    });
+
     // Add a rule to handle CSS files
     config.module.rules.push({
       test: /\.css$/,
