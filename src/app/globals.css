@@ -1,7 +1,7 @@
-@import '@storybook/stories/global.css';
-@import '@storybook/stories/components/header.css';
-@import '@storybook/stories/organisms/heroes/hero-css-styles.css';
-@import '@storybook/stories/components/card.css';
+@import '@storybook/stories/header.css';
+@import '@storybook/stories/card.css';
+@import '@storybook/stories/colors.css';
+@import '@storybook/stories/design-tokens.css';
 
 @tailwind base;
 @tailwind components;

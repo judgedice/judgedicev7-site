@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "judgedicev7": ["./lib"]
+      "judgedicev7": ["./lib"],
+      "@storybook/stories": ["./lib/stories"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.d.ts"],

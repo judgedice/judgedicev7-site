@@ -9,7 +9,7 @@
     "start": "next start",
     "clean": "rm -rf .next lib node_modules/judgedicev7",
     "prepare-lib": "cd ../judgedicev7-storybook && yarn build:lib && cd ../judgedicev7-site && mkdir -p lib && rm -rf lib/* && cp -r ../judgedicev7-storybook/lib-dist/* lib/",
-    "build:site": "yarn clean && yarn install && yarn prepare-lib && yarn export"
+    "build:site": "yarn clean && yarn install && yarn prepare-lib"
   },
   "dependencies": {
     "next": "14.1.3",
