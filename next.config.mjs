@@ -47,6 +47,7 @@ const nextConfig = {
        //'@storybook': resolve(process.cwd(), 'lib'),
        '@storybook': libPath,
        '@storybook/stories': libPath,
+       'judgedicev7': path.resolve(process.cwd(), 'lib'),
     };
     console.log('Webpack alias configured:', config.resolve.alias['@storybook'])
 
