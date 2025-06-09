@@ -55,9 +55,9 @@ jobs:
       - name: Debug lib contents
         run: |
           echo "Contents of lib/dist folder:"
-          ls -la lib/dist/
+          ls -la lib/stories/
           ls -la src
-          find lib/dist -name "*.css" -type f
+          find lib/stories -name "*.css" -type f
 
       - name: Build and Export Site
         run: |
