@@ -1,6 +1,6 @@
 'use client';
 console.log( "CWD: " + process.cwd() );
-import { Card } from 'judgedicev7';
+import { Card } from '../../lib/stories/components/Card';
 
 
 
