@@ -11,6 +11,9 @@ const __dirname = dirname(__filename);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/judgedicev7-site',
+  assetPrefix: '/judgedicev7-site',
+  
   images: {
     unoptimized: true,
   },
