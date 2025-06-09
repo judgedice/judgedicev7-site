@@ -37,7 +37,6 @@ const nextConfig = {
       include: [
         resolve(__dirname, 'src'),
         resolve(__dirname, 'lib'),
-        resolve(__dirname, '../judgedicev7-storybook/src'), 
       ],
     });
 
