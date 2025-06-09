@@ -69,7 +69,7 @@ const nextConfig = {
     // Add mainFields to ensure proper resolution
     config.resolve.mainFields = ['module', 'main'];
 
-    console.log('judgev7 alias configured:', config.resolve.alias['judgedicev7']);
+    console.log('judgesitev7 alias configured:', config.resolve.alias['judgedicev7']);
     //var jls = config.resolve.alias['judgedicev7'];
    // console.log('Contents of judgedicev7:', fs.readdirSync(jls));
    // console.log('Full alias config:', config.resolve.alias);
